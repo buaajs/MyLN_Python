@@ -2,6 +2,17 @@
 
 
 
+<center>文档历史记录</center>
+
+----
+
+| 版本 | 状态 |           作者           |    日期    | 说明                                                         |
+| :--: | :--: | :----------------------: | :--------: | ------------------------------------------------------------ |
+| V0.1 | 草稿 | [蒋苏](buaajs@gmail.com) | 2020-07-15 | 构建文档架构<br />– 前言<br />– 完成第1章介绍<br />– 完成第2章安装<br />– 完成第3章示例代码<br />– 参考资料 |
+| V0.2 | 初稿 | [蒋苏](buaajs@gmail.com) | 2020-07-30 | – 增加第3章实现方式介绍<br />– 修订原第3章为第4章示例代码<br />– 添加附录1连接参数<br />– 添加附录2连接错误处理 |
+
+
+
 # 0. 前言
 
 Python可以通过很多种方式来访问操作MySQL数据库，较为常见的方式有如下6种：
@@ -770,18 +781,6 @@ finally:    # 关闭游标mycursor和连接myconn
     myconn.close()
 ```
 
-**主键设置**
-
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-创建表的时候一般都会设置一个主键（PRIMARY KEY），使用 "INT AUTO_INCREMENT PRIMARY KEY" 语句来创建一个主键，主键起始值为 1，逐步递增。
-如果的表已经创建，需要使用 ALTER TABLE 来给表添加主键：
-
-```mysql
-sql_str = "ALTER TABLE mytable ADD COLUMN id INT AUTO_INCREMENT PRIMARY KEY"
-mycursor.execute(sql_str)
-```
-
 
 
 ## 4.5 删除数据表示例
@@ -1206,13 +1205,13 @@ finally:    # 关闭游标mycursor和连接myconn
 | Website | https://pypi.org/project/mysql-connector-python/  | 项目PyPI网址       |
 | Website | https://dev.mysql.com/downloads/installer/        | MySQL官方下载网址  |
 | Website | https://www.python.org/downloads/                 | Python官方下载网址 |
-| Website | https://dev.mysql.com/downloads/connector/python/ | 官方下载网址       |
+| Website | https://dev.mysql.com/downloads/connector/python/ | 项目官方下载网址   |
 
 
 
-# 附件
+# 附录
 
-##  附件1 - Connector/Python Connection Arguments
+##  附录1 - Connector/Python Connection Arguments
 
 `MySQL Connector/Python`连接参数如下表：
 
@@ -1259,7 +1258,7 @@ finally:    # 关闭游标mycursor和连接myconn
 
 
 
-## 附件2 - 连接错误处理
+## 附录2 - 连接错误处理
 
 要处理`MySQL Connector/Python`连接错误，可以使用以下`try` 语句，并通过`errors.Error`异常捕获所有错误 ：
 
